@@ -1,0 +1,33 @@
+
+Detector: incorrect-equality
+IoERegistry.isActive(bytes32) (contracts/IoERegistry.sol#69-71) uses a dangerous strict equality:
+	- devices[did].status == Status.Active (contracts/IoERegistry.sol#70)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+
+Detector: timestamp
+AccessPolicy.checkAccess(bytes32,bytes32,uint8) (contracts/AccessPolicy.sol#42-46) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (p.actions & action) == action && action != 0 && block.timestamp <= p.expiry (contracts/AccessPolicy.sol#45)
+EnergyMarket.createOffer(bytes32,uint64,uint128,uint64) (contracts/EnergyMarket.sol#46-52) uses timestamp for comparisons
+	Dangerous comparisons:
+	- energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp (contracts/EnergyMarket.sol#48)
+EnergyMarket.acceptOffer(uint256) (contracts/EnergyMarket.sol#54-62) uses timestamp for comparisons
+	Dangerous comparisons:
+	- o.state != State.Open || block.timestamp > o.deadline (contracts/EnergyMarket.sol#56)
+EnergyMarket.refundExpired(uint256) (contracts/EnergyMarket.sol#79-87) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp <= o.deadline (contracts/EnergyMarket.sol#82)
+EnergyMarketV2.createOffer(bytes32,uint64,uint128,uint64) (contracts/EnergyMarketV2.sol#32-38) uses timestamp for comparisons
+	Dangerous comparisons:
+	- energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp (contracts/EnergyMarketV2.sol#34)
+EnergyMarketV2.acceptOffer(uint256) (contracts/EnergyMarketV2.sol#40-47) uses timestamp for comparisons
+	Dangerous comparisons:
+	- o.state != State.Open || block.timestamp > o.deadline (contracts/EnergyMarketV2.sol#42)
+EnergyMarketV2.refundExpired(uint256) (contracts/EnergyMarketV2.sol#72-80) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp <= o.deadline (contracts/EnergyMarketV2.sol#75)
+IoERegistry.isActive(bytes32) (contracts/IoERegistry.sol#69-71) uses timestamp for comparisons
+	Dangerous comparisons:
+	- devices[did].status == Status.Active (contracts/IoERegistry.sol#70)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+. analyzed (13 contracts with 81 detectors), 9 result(s) found

@@ -1,0 +1,205 @@
+IoERegistry.sol 32 mutants
+IoERegistry.sol SDL 19 stillborn
+IoERegistry.sol SDL 20 stillborn
+IoERegistry.sol ROR 34 killed
+IoERegistry.sol MOD 39 killed
+IoERegistry.sol ROR 40 killed
+IoERegistry.sol GRD 40 survived
+IoERegistry.sol SDL 41 killed
+IoERegistry.sol MOD 45 killed
+IoERegistry.sol ROR 46 killed
+IoERegistry.sol ROR 46 killed
+IoERegistry.sol LOR 46 survived
+IoERegistry.sol GRD 46 survived
+IoERegistry.sol ROR 47 killed
+IoERegistry.sol GRD 47 killed
+IoERegistry.sol SDL 48 killed
+IoERegistry.sol SDL 53 stillborn
+IoERegistry.sol ROR 54 killed
+IoERegistry.sol GRD 54 survived
+IoERegistry.sol ROR 55 killed
+IoERegistry.sol GRD 55 killed
+IoERegistry.sol ROR 56 killed
+IoERegistry.sol GRD 56 survived
+IoERegistry.sol SDL 57 killed
+IoERegistry.sol SDL 62 stillborn
+IoERegistry.sol ROR 63 killed
+IoERegistry.sol GRD 63 survived
+IoERegistry.sol ROR 64 killed
+IoERegistry.sol ROR 64 survived
+IoERegistry.sol LOR 64 killed
+IoERegistry.sol GRD 64 survived
+IoERegistry.sol SDL 65 killed
+IoERegistry.sol ROR 70 killed
+AccessPolicy.sol 22 mutants
+AccessPolicy.sol ROR 30 killed
+AccessPolicy.sol GRD 30 killed
+AccessPolicy.sol ROR 31 killed
+AccessPolicy.sol ROR 31 survived
+AccessPolicy.sol LOR 31 survived
+AccessPolicy.sol GRD 31 survived
+AccessPolicy.sol SDL 32 killed
+AccessPolicy.sol ROR 37 survived
+AccessPolicy.sol GRD 37 survived
+AccessPolicy.sol LOR 43 killed
+AccessPolicy.sol SDL 44 stillborn
+AccessPolicy.sol ROR 45 killed
+AccessPolicy.sol ROR 45 killed
+AccessPolicy.sol ROR 45 survived
+AccessPolicy.sol LOR 45 killed
+AccessPolicy.sol LOR 45 killed
+AccessPolicy.sol ROR 50 killed
+AccessPolicy.sol GRD 50 killed
+AccessPolicy.sol GRD 51 killed
+AccessPolicy.sol BLR 52 killed
+AccessPolicy.sol SDL 52 killed
+AccessPolicy.sol SDL 53 survived
+AnchorRegistry.sol 21 mutants
+AnchorRegistry.sol SDL 14 stillborn
+AnchorRegistry.sol SDL 15 stillborn
+AnchorRegistry.sol GRD 26 killed
+AnchorRegistry.sol ROR 27 killed
+AnchorRegistry.sol AOR 27 killed
+AnchorRegistry.sol GRD 27 killed
+AnchorRegistry.sol ROR 28 killed
+AnchorRegistry.sol ROR 28 killed
+AnchorRegistry.sol ROR 28 survived
+AnchorRegistry.sol LOR 28 survived
+AnchorRegistry.sol LOR 28 survived
+AnchorRegistry.sol GRD 28 survived
+AnchorRegistry.sol SDL 29 killed
+AnchorRegistry.sol SDL 30 killed
+AnchorRegistry.sol ROR 38 killed
+AnchorRegistry.sol ROR 40 survived
+AnchorRegistry.sol SDL 40 killed
+AnchorRegistry.sol ROR 42 killed
+AnchorRegistry.sol ROR 42 killed
+AnchorRegistry.sol LOR 42 killed
+AnchorRegistry.sol SDL 48 survived
+EnergyMarket.sol 44 mutants
+EnergyMarket.sol SDL 25 stillborn
+EnergyMarket.sol SDL 26 stillborn
+EnergyMarket.sol SDL 27 stillborn
+EnergyMarket.sol GRD 47 killed
+EnergyMarket.sol ROR 48 killed
+EnergyMarket.sol ROR 48 killed
+EnergyMarket.sol ROR 48 survived
+EnergyMarket.sol LOR 48 survived
+EnergyMarket.sol LOR 48 survived
+EnergyMarket.sol GRD 48 survived
+EnergyMarket.sol SDL 49 killed
+EnergyMarket.sol SDL 50 killed
+EnergyMarket.sol SDL 55 stillborn
+EnergyMarket.sol ROR 56 killed
+EnergyMarket.sol ROR 56 survived
+EnergyMarket.sol LOR 56 survived
+EnergyMarket.sol GRD 56 survived
+EnergyMarket.sol ROR 58 killed
+EnergyMarket.sol GRD 58 killed
+EnergyMarket.sol SDL 59 killed
+EnergyMarket.sol SDL 60 killed
+EnergyMarket.sol SDL 66 stillborn
+EnergyMarket.sol ROR 67 killed
+EnergyMarket.sol GRD 67 killed
+EnergyMarket.sol ROR 68 killed
+EnergyMarket.sol GRD 68 killed
+EnergyMarket.sol ROR 69 killed
+EnergyMarket.sol GRD 69 killed
+EnergyMarket.sol SDL 70 killed
+EnergyMarket.sol AOR 73 killed
+EnergyMarket.sol SDL 73 killed
+EnergyMarket.sol ROR 74 survived
+EnergyMarket.sol AOR 74 killed
+EnergyMarket.sol SDL 80 stillborn
+EnergyMarket.sol ROR 81 killed
+EnergyMarket.sol GRD 81 survived
+EnergyMarket.sol ROR 82 survived
+EnergyMarket.sol GRD 82 killed
+EnergyMarket.sol SDL 83 survived
+EnergyMarket.sol AOR 85 killed
+EnergyMarket.sol SDL 85 killed
+EnergyMarket.sol ROR 91 killed
+EnergyMarket.sol GRD 91 survived
+EnergyMarket.sol GRD 94 survived
+EnergyMarketV2.sol 49 mutants
+EnergyMarketV2.sol SDL 18 stillborn
+EnergyMarketV2.sol SDL 19 stillborn
+EnergyMarketV2.sol SDL 20 stillborn
+EnergyMarketV2.sol GRD 33 survived
+EnergyMarketV2.sol ROR 34 killed
+EnergyMarketV2.sol ROR 34 killed
+EnergyMarketV2.sol ROR 34 survived
+EnergyMarketV2.sol LOR 34 survived
+EnergyMarketV2.sol LOR 34 survived
+EnergyMarketV2.sol GRD 34 survived
+EnergyMarketV2.sol SDL 35 killed
+EnergyMarketV2.sol SDL 36 killed
+EnergyMarketV2.sol SDL 41 stillborn
+EnergyMarketV2.sol ROR 42 killed
+EnergyMarketV2.sol ROR 42 survived
+EnergyMarketV2.sol LOR 42 survived
+EnergyMarketV2.sol GRD 42 survived
+EnergyMarketV2.sol ROR 44 killed
+EnergyMarketV2.sol GRD 44 survived
+EnergyMarketV2.sol SDL 45 killed
+EnergyMarketV2.sol SDL 55 stillborn
+EnergyMarketV2.sol ROR 56 killed
+EnergyMarketV2.sol GRD 56 survived
+EnergyMarketV2.sol ROR 57 killed
+EnergyMarketV2.sol GRD 57 survived
+EnergyMarketV2.sol GRD 58 killed
+EnergyMarketV2.sol ROR 60 survived
+EnergyMarketV2.sol GRD 60 killed
+EnergyMarketV2.sol ROR 63 killed
+EnergyMarketV2.sol ROR 63 killed
+EnergyMarketV2.sol LOR 63 killed
+EnergyMarketV2.sol GRD 63 killed
+EnergyMarketV2.sol SDL 64 survived
+EnergyMarketV2.sol AOR 67 killed
+EnergyMarketV2.sol SDL 67 killed
+EnergyMarketV2.sol ROR 68 survived
+EnergyMarketV2.sol AOR 68 killed
+EnergyMarketV2.sol SDL 73 stillborn
+EnergyMarketV2.sol ROR 74 survived
+EnergyMarketV2.sol GRD 74 survived
+EnergyMarketV2.sol ROR 75 survived
+EnergyMarketV2.sol GRD 75 survived
+EnergyMarketV2.sol SDL 76 survived
+EnergyMarketV2.sol AOR 78 survived
+EnergyMarketV2.sol SDL 78 survived
+EnergyMarketV2.sol ROR 84 survived
+EnergyMarketV2.sol GRD 84 survived
+EnergyMarketV2.sol SDL 85 survived
+EnergyMarketV2.sol GRD 87 survived
+{
+ "IoERegistry.sol": {
+  "killed": 20,
+  "survived": 8,
+  "stillborn": 4,
+  "error": 0
+ },
+ "AccessPolicy.sol": {
+  "killed": 14,
+  "survived": 7,
+  "stillborn": 1,
+  "error": 0
+ },
+ "AnchorRegistry.sol": {
+  "killed": 13,
+  "survived": 6,
+  "stillborn": 2,
+  "error": 0
+ },
+ "EnergyMarket.sol": {
+  "killed": 25,
+  "survived": 13,
+  "stillborn": 6,
+  "error": 0
+ },
+ "EnergyMarketV2.sol": {
+  "killed": 18,
+  "survived": 25,
+  "stillborn": 6,
+  "error": 0
+ }
+}

@@ -1,0 +1,55 @@
+IoERegistry.sol 32 mutants
+AccessPolicy.sol 22 mutants
+AnchorRegistry.sol 21 mutants
+AnchorRegistry.sol ROR 40 survived
+EnergyMarket.sol 44 mutants
+EnergyMarket.sol ROR 48 killed
+EnergyMarket.sol ROR 48 killed
+EnergyMarket.sol ROR 48 killed
+EnergyMarket.sol ROR 56 killed
+EnergyMarket.sol ROR 56 killed
+EnergyMarket.sol ROR 74 survived
+EnergyMarket.sol GRD 94 killed
+EnergyMarketV2.sol 49 mutants
+EnergyMarketV2.sol GRD 33 killed
+EnergyMarketV2.sol ROR 34 killed
+EnergyMarketV2.sol ROR 34 killed
+EnergyMarketV2.sol ROR 34 killed
+EnergyMarketV2.sol ROR 42 killed
+EnergyMarketV2.sol ROR 42 killed
+EnergyMarketV2.sol GRD 44 killed
+EnergyMarketV2.sol ROR 60 survived
+EnergyMarketV2.sol ROR 68 survived
+EnergyMarketV2.sol GRD 87 killed
+{
+ "IoERegistry.sol": {
+  "killed": 28,
+  "survived": 0,
+  "stillborn": 4,
+  "error": 0
+ },
+ "AccessPolicy.sol": {
+  "killed": 21,
+  "survived": 0,
+  "stillborn": 1,
+  "error": 0
+ },
+ "AnchorRegistry.sol": {
+  "killed": 18,
+  "survived": 1,
+  "stillborn": 2,
+  "error": 0
+ },
+ "EnergyMarket.sol": {
+  "killed": 40,
+  "survived": 1,
+  "stillborn": 6,
+  "error": 0
+ },
+ "EnergyMarketV2.sol": {
+  "killed": 44,
+  "survived": 2,
+  "stillborn": 6,
+  "error": 0
+ }
+}

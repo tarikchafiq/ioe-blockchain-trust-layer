@@ -1,0 +1,53 @@
+{
+ "calls": 12000,
+ "reverted": 6817,
+ "byOp": {
+  "register": {
+   "ok": 217,
+   "rev": 1056
+  },
+  "request": {
+   "ok": 828,
+   "rev": 270
+  },
+  "warp": {
+   "ok": 1073,
+   "rev": 7
+  },
+  "settle": {
+   "ok": 123,
+   "rev": 894
+  },
+  "withdraw": {
+   "ok": 88,
+   "rev": 1016
+  },
+  "anchor": {
+   "ok": 652,
+   "rev": 437
+  },
+  "revoke": {
+   "ok": 256,
+   "rev": 821
+  },
+  "grant": {
+   "ok": 744,
+   "rev": 370
+  },
+  "offer": {
+   "ok": 855,
+   "rev": 177
+  },
+  "accept": {
+   "ok": 299,
+   "rev": 751
+  },
+  "refund": {
+   "ok": 48,
+   "rev": 1018
+  }
+ },
+ "violations": 0,
+ "sequences": 200,
+ "steps": 60
+}

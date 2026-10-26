@@ -1,0 +1,250 @@
+{
+  "env": {
+    "python": "3.13.16",
+    "cpu": "x86_64",
+    "machine": "x86_64",
+    "cryptography": "50.0.1",
+    "pqcrypto": "1.0.0"
+  },
+  "signatures": {
+    "Ed25519": {
+      "sign": {
+        "median_us": 35.331,
+        "p95_us": 59.049,
+        "reps": 3000
+      },
+      "verify": {
+        "median_us": 114.9045,
+        "p95_us": 173.085,
+        "reps": 3000
+      },
+      "pk_bytes": 32,
+      "sig_bytes": 64,
+      "nist_level": "classical (~128-bit)",
+      "pq_secure": false
+    },
+    "ECDSA P-256": {
+      "sign": {
+        "median_us": 27.3135,
+        "p95_us": 51.336,
+        "reps": 3000
+      },
+      "verify": {
+        "median_us": 74.959,
+        "p95_us": 115.033,
+        "reps": 3000
+      },
+      "pk_bytes": 64,
+      "sig_bytes": 64,
+      "sig_bytes_der": 70,
+      "nist_level": "classical (~128-bit)",
+      "pq_secure": false
+    },
+    "HMAC-SHA256 (symmetric)": {
+      "sign": {
+        "median_us": 2.696,
+        "p95_us": 5.06,
+        "reps": 5000
+      },
+      "verify": {
+        "median_us": 2.746,
+        "p95_us": 5.128,
+        "reps": 5000
+      },
+      "pk_bytes": 0,
+      "sig_bytes": 32,
+      "nist_level": "symmetric 256-bit key",
+      "pq_secure": true
+    },
+    "ML-DSA-44": {
+      "sign": {
+        "median_us": 8082.5105,
+        "p95_us": 12635.273,
+        "reps": 1000
+      },
+      "verify": {
+        "median_us": 132.2045,
+        "p95_us": 170.408,
+        "reps": 1000
+      },
+      "pk_bytes": 1312,
+      "sig_bytes": 2420,
+      "nist_level": 2,
+      "pq_secure": true
+    },
+    "ML-DSA-65": {
+      "sign": {
+        "median_us": 10948.5945,
+        "p95_us": 17212.499,
+        "reps": 1000
+      },
+      "verify": {
+        "median_us": 241.383,
+        "p95_us": 445.672,
+        "reps": 1000
+      },
+      "pk_bytes": 1952,
+      "sig_bytes": 3309,
+      "nist_level": 3,
+      "pq_secure": true
+    },
+    "ML-DSA-87": {
+      "sign": {
+        "median_us": 14967.533,
+        "p95_us": 25205.231,
+        "reps": 600
+      },
+      "verify": {
+        "median_us": 353.683,
+        "p95_us": 465.529,
+        "reps": 600
+      },
+      "pk_bytes": 2592,
+      "sig_bytes": 4627,
+      "nist_level": 5,
+      "pq_secure": true
+    },
+    "SLH-DSA-SHA2-128f": {
+      "sign": {
+        "median_us": 78631.009,
+        "p95_us": 106121.014,
+        "reps": 60
+      },
+      "verify": {
+        "median_us": 4353.084,
+        "p95_us": 6109.107,
+        "reps": 200
+      },
+      "pk_bytes": 32,
+      "sig_bytes": 17088,
+      "nist_level": 1,
+      "pq_secure": true
+    },
+    "SLH-DSA-SHA2-128s": {
+      "sign": {
+        "median_us": 1707476.7915,
+        "p95_us": 1754741.046,
+        "reps": 10
+      },
+      "verify": {
+        "median_us": 1519.437,
+        "p95_us": 1877.539,
+        "reps": 200
+      },
+      "pk_bytes": 32,
+      "sig_bytes": 7856,
+      "nist_level": 1,
+      "pq_secure": true
+    }
+  },
+  "hash": {
+    "SHA-256": {
+      "median_us": 0.902,
+      "p95_us": 0.951,
+      "reps": 20000
+    },
+    "SHA3-256": {
+      "median_us": 1.01,
+      "p95_us": 1.647,
+      "reps": 20000
+    },
+    "Keccak-256": {
+      "median_us": 4.736,
+      "p95_us": 8.402,
+      "reps": 20000
+    }
+  },
+  "merkle": [
+    {
+      "leaves": 256,
+      "build_ms": 1.374349
+    },
+    {
+      "leaves": 1024,
+      "build_ms": 8.809742
+    },
+    {
+      "leaves": 4096,
+      "build_ms": 23.581476
+    },
+    {
+      "leaves": 16384,
+      "build_ms": 86.711623
+    },
+    {
+      "leaves": 65536,
+      "build_ms": 398.329769
+    }
+  ],
+  "c_level": {
+    "ECDSA P-256": {
+      "sign_us": 27.421376059493415,
+      "verify_us": 82.74378387323652,
+      "pk_bytes": 64,
+      "sig_bytes": 64,
+      "level": "classical",
+      "pq": false
+    },
+    "Ed25519": {
+      "sign_us": 66.89813421103685,
+      "verify_us": 133.56127791430708,
+      "pk_bytes": 32,
+      "sig_bytes": 64,
+      "level": "classical",
+      "pq": false
+    },
+    "ML-DSA-44": {
+      "keypair_us": 80.218,
+      "keypair_us_sd": 51.687,
+      "sign_us": 433.555,
+      "sign_us_sd": 325.788,
+      "verify_us": 88.387,
+      "verify_us_sd": 34.129,
+      "pk_bytes": 1312,
+      "sig_bytes": 2420,
+      "level": "NIST level 2",
+      "pq": true
+    },
+    "ML-DSA-65": {
+      "keypair_us": 140.379,
+      "keypair_us_sd": 50.859,
+      "sign_us": 667.919,
+      "sign_us_sd": 532.906,
+      "verify_us": 144.571,
+      "verify_us_sd": 73.975,
+      "pk_bytes": 1952,
+      "sig_bytes": 3309,
+      "level": "NIST level 3",
+      "pq": true
+    },
+    "ML-DSA-87": {
+      "keypair_us": 224.716,
+      "keypair_us_sd": 106.466,
+      "sign_us": 803.493,
+      "sign_us_sd": 593.355,
+      "verify_us": 226.027,
+      "verify_us_sd": 84.916,
+      "pk_bytes": 2592,
+      "sig_bytes": 4627,
+      "level": "NIST level 5",
+      "pq": true
+    },
+    "SPHINCS+-SHA2-128f-simple": {
+      "keypair_us": 1851.71,
+      "keypair_us_sd": 543.506,
+      "sign_us": 42063.748,
+      "sign_us_sd": 5244.649,
+      "verify_us": 2544.276,
+      "verify_us_sd": 695.891,
+      "pk_bytes": 32,
+      "sig_bytes": 17088,
+      "level": "NIST level 1",
+      "pq": true
+    }
+  },
+  "c_level_env": {
+    "openssl": "3.0.13",
+    "liboqs": "0.14.0 (AVX2/AVX-512 SHA-3 enabled)",
+    "cpu": "Intel Xeon @ 2.80 GHz, 2 vCPU, 8 GB RAM (cloud VM)"
+  }
+}

@@ -1,0 +1,1405 @@
+[
+ {
+  "contract": "IoERegistry.sol",
+  "op": "SDL",
+  "line": 19,
+  "code": "mapping(address => bool) public isGateway;",
+  "status": "stillborn",
+  "secs": 1.7
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "SDL",
+  "line": 20,
+  "code": "mapping(bytes32 => Device) private devices;",
+  "status": "stillborn",
+  "secs": 1.8
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 34,
+  "code": "modifier onlyAdmin() { if (msg.sender != admin) revert NotAdmin(); _; }",
+  "status": "killed",
+  "secs": 6.9
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "MOD",
+  "line": 39,
+  "code": "function setGateway(address gw, bool enabled) external onlyAdmin {",
+  "status": "killed",
+  "secs": 8.3
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 40,
+  "code": "if (gw == address(0)) revert ZeroValue();",
+  "status": "killed",
+  "secs": 8.0
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "GRD",
+  "line": 40,
+  "code": "if (gw == address(0)) revert ZeroValue();",
+  "status": "killed",
+  "secs": 8.6,
+  "prior": "survived"
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "SDL",
+  "line": 41,
+  "code": "isGateway[gw] = enabled;",
+  "status": "killed",
+  "secs": 6.9
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "MOD",
+  "line": 45,
+  "code": "function registerDevice(bytes32 did, bytes32 keyHash, uint8 deviceClass) external onlyGateway {",
+  "status": "killed",
+  "secs": 8.2
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 46,
+  "code": "if (did == bytes32(0) || keyHash == bytes32(0)) revert ZeroValue();",
+  "status": "killed",
+  "secs": 7.0
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 46,
+  "code": "if (did == bytes32(0) || keyHash == bytes32(0)) revert ZeroValue();",
+  "status": "killed",
+  "secs": 6.7
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "LOR",
+  "line": 46,
+  "code": "if (did == bytes32(0) || keyHash == bytes32(0)) revert ZeroValue();",
+  "status": "killed",
+  "secs": 9.2,
+  "prior": "survived"
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "GRD",
+  "line": 46,
+  "code": "if (did == bytes32(0) || keyHash == bytes32(0)) revert ZeroValue();",
+  "status": "killed",
+  "secs": 9.4,
+  "prior": "survived"
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 47,
+  "code": "if (devices[did].status != Status.None) revert AlreadyRegistered();",
+  "status": "killed",
+  "secs": 7.3
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "GRD",
+  "line": 47,
+  "code": "if (devices[did].status != Status.None) revert AlreadyRegistered();",
+  "status": "killed",
+  "secs": 9.8
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "SDL",
+  "line": 48,
+  "code": "devices[did] = Device(keyHash, msg.sender, deviceClass, Status.Active, uint64(block.timestamp));",
+  "status": "killed",
+  "secs": 9.6
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "SDL",
+  "line": 53,
+  "code": "Device storage d = devices[did];",
+  "status": "stillborn",
+  "secs": 2.2
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 54,
+  "code": "if (d.status != Status.Active) revert UnknownDevice();",
+  "status": "killed",
+  "secs": 8.3
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "GRD",
+  "line": 54,
+  "code": "if (d.status != Status.Active) revert UnknownDevice();",
+  "status": "killed",
+  "secs": 9.3,
+  "prior": "survived"
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 55,
+  "code": "if (d.gateway != msg.sender) revert NotResponsibleGateway();",
+  "status": "killed",
+  "secs": 9.1
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "GRD",
+  "line": 55,
+  "code": "if (d.gateway != msg.sender) revert NotResponsibleGateway();",
+  "status": "killed",
+  "secs": 8.8
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 56,
+  "code": "if (newKeyHash == bytes32(0)) revert ZeroValue();",
+  "status": "killed",
+  "secs": 8.8
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "GRD",
+  "line": 56,
+  "code": "if (newKeyHash == bytes32(0)) revert ZeroValue();",
+  "status": "killed",
+  "secs": 8.8,
+  "prior": "survived"
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "SDL",
+  "line": 57,
+  "code": "d.keyHash = newKeyHash;",
+  "status": "killed",
+  "secs": 9.8
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "SDL",
+  "line": 62,
+  "code": "Device storage d = devices[did];",
+  "status": "stillborn",
+  "secs": 1.9
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 63,
+  "code": "if (d.status != Status.Active) revert UnknownDevice();",
+  "status": "killed",
+  "secs": 8.1
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "GRD",
+  "line": 63,
+  "code": "if (d.status != Status.Active) revert UnknownDevice();",
+  "status": "killed",
+  "secs": 8.7,
+  "prior": "survived"
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 64,
+  "code": "if (d.gateway != msg.sender && msg.sender != admin) revert NotResponsibleGateway();",
+  "status": "killed",
+  "secs": 8.2
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 64,
+  "code": "if (d.gateway != msg.sender && msg.sender != admin) revert NotResponsibleGateway();",
+  "status": "killed",
+  "secs": 9.5,
+  "prior": "survived"
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "LOR",
+  "line": 64,
+  "code": "if (d.gateway != msg.sender && msg.sender != admin) revert NotResponsibleGateway();",
+  "status": "killed",
+  "secs": 8.3
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "GRD",
+  "line": 64,
+  "code": "if (d.gateway != msg.sender && msg.sender != admin) revert NotResponsibleGateway();",
+  "status": "killed",
+  "secs": 9.6,
+  "prior": "survived"
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "SDL",
+  "line": 65,
+  "code": "d.status = Status.Revoked;",
+  "status": "killed",
+  "secs": 8.4
+ },
+ {
+  "contract": "IoERegistry.sol",
+  "op": "ROR",
+  "line": 70,
+  "code": "return devices[did].status == Status.Active;",
+  "status": "killed",
+  "secs": 9.7
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "ROR",
+  "line": 30,
+  "code": "if (registry.gatewayOf(resource) != msg.sender) revert NotResourceGateway();",
+  "status": "killed",
+  "secs": 9.6
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "GRD",
+  "line": 30,
+  "code": "if (registry.gatewayOf(resource) != msg.sender) revert NotResourceGateway();",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "ROR",
+  "line": 31,
+  "code": "if (actions == 0 || actions > 7) revert InvalidAction();",
+  "status": "killed",
+  "secs": 6.2
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "ROR",
+  "line": 31,
+  "code": "if (actions == 0 || actions > 7) revert InvalidAction();",
+  "status": "killed",
+  "secs": 8.0,
+  "prior": "survived"
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "LOR",
+  "line": 31,
+  "code": "if (actions == 0 || actions > 7) revert InvalidAction();",
+  "status": "killed",
+  "secs": 7.5,
+  "prior": "survived"
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "GRD",
+  "line": 31,
+  "code": "if (actions == 0 || actions > 7) revert InvalidAction();",
+  "status": "killed",
+  "secs": 7.3,
+  "prior": "survived"
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "SDL",
+  "line": 32,
+  "code": "policies[subject][resource] = Policy(actions, expiry);",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "ROR",
+  "line": 37,
+  "code": "if (registry.gatewayOf(resource) != msg.sender) revert NotResourceGateway();",
+  "status": "killed",
+  "secs": 7.0,
+  "prior": "survived"
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "GRD",
+  "line": 37,
+  "code": "if (registry.gatewayOf(resource) != msg.sender) revert NotResourceGateway();",
+  "status": "killed",
+  "secs": 7.7,
+  "prior": "survived"
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "LOR",
+  "line": 43,
+  "code": "if (!registry.isActive(subject) || !registry.isActive(resource)) return false;",
+  "status": "killed",
+  "secs": 6.3
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "SDL",
+  "line": 44,
+  "code": "Policy memory p = policies[subject][resource];",
+  "status": "stillborn",
+  "secs": 1.9
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "ROR",
+  "line": 45,
+  "code": "return (p.actions & action) == action && action != 0 && block.timestamp <= p.expiry;",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "ROR",
+  "line": 45,
+  "code": "return (p.actions & action) == action && action != 0 && block.timestamp <= p.expiry;",
+  "status": "killed",
+  "secs": 6.7
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "ROR",
+  "line": 45,
+  "code": "return (p.actions & action) == action && action != 0 && block.timestamp <= p.expiry;",
+  "status": "killed",
+  "secs": 7.7,
+  "prior": "survived"
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "LOR",
+  "line": 45,
+  "code": "return (p.actions & action) == action && action != 0 && block.timestamp <= p.expiry;",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "LOR",
+  "line": 45,
+  "code": "return (p.actions & action) == action && action != 0 && block.timestamp <= p.expiry;",
+  "status": "killed",
+  "secs": 5.9
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "ROR",
+  "line": 50,
+  "code": "if (registry.gatewayOf(subject) != msg.sender) revert NotSubjectGateway();",
+  "status": "killed",
+  "secs": 5.8
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "GRD",
+  "line": 50,
+  "code": "if (registry.gatewayOf(subject) != msg.sender) revert NotSubjectGateway();",
+  "status": "killed",
+  "secs": 5.5
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "GRD",
+  "line": 51,
+  "code": "if (usedNonce[subject][nonce]) revert ReplayedNonce();",
+  "status": "killed",
+  "secs": 6.0
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "BLR",
+  "line": 52,
+  "code": "usedNonce[subject][nonce] = true;",
+  "status": "killed",
+  "secs": 6.3
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "SDL",
+  "line": 52,
+  "code": "usedNonce[subject][nonce] = true;",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "AccessPolicy.sol",
+  "op": "SDL",
+  "line": 53,
+  "code": "granted = checkAccess(subject, resource, action);",
+  "status": "killed",
+  "secs": 7.6,
+  "prior": "survived"
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "SDL",
+  "line": 14,
+  "code": "mapping(address => uint64) public lastSeq;",
+  "status": "stillborn",
+  "secs": 1.9
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "SDL",
+  "line": 15,
+  "code": "mapping(address => mapping(uint64 => Anchor)) public anchors;",
+  "status": "stillborn",
+  "secs": 1.6
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "GRD",
+  "line": 26,
+  "code": "if (!registry.isGateway(msg.sender)) revert NotGateway();",
+  "status": "killed",
+  "secs": 6.3
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "ROR",
+  "line": 27,
+  "code": "if (seq != lastSeq[msg.sender] + 1) revert BadSequence();",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "AOR",
+  "line": 27,
+  "code": "if (seq != lastSeq[msg.sender] + 1) revert BadSequence();",
+  "status": "killed",
+  "secs": 6.6
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "GRD",
+  "line": 27,
+  "code": "if (seq != lastSeq[msg.sender] + 1) revert BadSequence();",
+  "status": "killed",
+  "secs": 6.0
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "ROR",
+  "line": 28,
+  "code": "if (root == bytes32(0) || leafCount == 0 || tEnd < tStart) revert BadBatch();",
+  "status": "killed",
+  "secs": 5.8
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "ROR",
+  "line": 28,
+  "code": "if (root == bytes32(0) || leafCount == 0 || tEnd < tStart) revert BadBatch();",
+  "status": "killed",
+  "secs": 6.0
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "ROR",
+  "line": 28,
+  "code": "if (root == bytes32(0) || leafCount == 0 || tEnd < tStart) revert BadBatch();",
+  "status": "killed",
+  "secs": 7.9,
+  "prior": "survived"
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "LOR",
+  "line": 28,
+  "code": "if (root == bytes32(0) || leafCount == 0 || tEnd < tStart) revert BadBatch();",
+  "status": "killed",
+  "secs": 8.2,
+  "prior": "survived"
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "LOR",
+  "line": 28,
+  "code": "if (root == bytes32(0) || leafCount == 0 || tEnd < tStart) revert BadBatch();",
+  "status": "killed",
+  "secs": 7.9,
+  "prior": "survived"
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "GRD",
+  "line": 28,
+  "code": "if (root == bytes32(0) || leafCount == 0 || tEnd < tStart) revert BadBatch();",
+  "status": "killed",
+  "secs": 7.9,
+  "prior": "survived"
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "SDL",
+  "line": 29,
+  "code": "lastSeq[msg.sender] = seq;",
+  "status": "killed",
+  "secs": 6.7
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "SDL",
+  "line": 30,
+  "code": "anchors[msg.sender][seq] = Anchor(root, leafCount, tStart, tEnd, uint64(block.timestamp));",
+  "status": "killed",
+  "secs": 7.4
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "ROR",
+  "line": 38,
+  "code": "for (uint256 i = 0; i < proof.length; i++) {",
+  "status": "killed",
+  "secs": 7.0
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "ROR",
+  "line": 40,
+  "code": "h = h < p ? keccak256(abi.encodePacked(h, p)) : keccak256(abi.encodePacked(p, h));",
+  "status": "survived",
+  "secs": 7.9,
+  "prior": "survived"
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "SDL",
+  "line": 40,
+  "code": "h = h < p ? keccak256(abi.encodePacked(h, p)) : keccak256(abi.encodePacked(p, h));",
+  "status": "killed",
+  "secs": 7.1
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "ROR",
+  "line": 42,
+  "code": "return anchors[gw][seq].root == h && h != bytes32(0);",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "ROR",
+  "line": 42,
+  "code": "return anchors[gw][seq].root == h && h != bytes32(0);",
+  "status": "killed",
+  "secs": 6.4
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "LOR",
+  "line": 42,
+  "code": "return anchors[gw][seq].root == h && h != bytes32(0);",
+  "status": "killed",
+  "secs": 6.6
+ },
+ {
+  "contract": "AnchorRegistry.sol",
+  "op": "SDL",
+  "line": 48,
+  "code": "ok = verifyInclusion(gw, seq, leaf, proof);",
+  "status": "killed",
+  "secs": 8.0,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 25,
+  "code": "uint256 public nextId = 1;",
+  "status": "stillborn",
+  "secs": 1.8
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 26,
+  "code": "mapping(uint256 => Offer) public offers;",
+  "status": "stillborn",
+  "secs": 1.8
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 27,
+  "code": "mapping(address => uint256) public credit;",
+  "status": "stillborn",
+  "secs": 1.7
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "GRD",
+  "line": 47,
+  "code": "if (!registry.isActive(meterDid)) revert InactiveMeter();",
+  "status": "killed",
+  "secs": 6.9
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 48,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "killed",
+  "secs": 7.0
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 48,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "killed",
+  "secs": 6.6
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 48,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "survived",
+  "secs": 8.3,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "LOR",
+  "line": 48,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "killed",
+  "secs": 8.0,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "LOR",
+  "line": 48,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "killed",
+  "secs": 8.2,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "GRD",
+  "line": 48,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "killed",
+  "secs": 8.0,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 49,
+  "code": "id = nextId++;",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 50,
+  "code": "offers[id] = Offer(msg.sender, address(0), meterDid, energyWh, pricePerWh, deadline, State.Open);",
+  "status": "killed",
+  "secs": 6.6
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 55,
+  "code": "Offer storage o = offers[id];",
+  "status": "stillborn",
+  "secs": 2.0
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 56,
+  "code": "if (o.state != State.Open || block.timestamp > o.deadline) revert BadState();",
+  "status": "killed",
+  "secs": 7.0
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 56,
+  "code": "if (o.state != State.Open || block.timestamp > o.deadline) revert BadState();",
+  "status": "survived",
+  "secs": 7.9,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "LOR",
+  "line": 56,
+  "code": "if (o.state != State.Open || block.timestamp > o.deadline) revert BadState();",
+  "status": "killed",
+  "secs": 7.8,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "GRD",
+  "line": 56,
+  "code": "if (o.state != State.Open || block.timestamp > o.deadline) revert BadState();",
+  "status": "killed",
+  "secs": 8.0,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 58,
+  "code": "if (msg.value != cost) revert WrongPayment();",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "GRD",
+  "line": 58,
+  "code": "if (msg.value != cost) revert WrongPayment();",
+  "status": "killed",
+  "secs": 6.2
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 59,
+  "code": "o.buyer = msg.sender;",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 60,
+  "code": "o.state = State.Accepted;",
+  "status": "killed",
+  "secs": 6.3
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 66,
+  "code": "Offer storage o = offers[id];",
+  "status": "stillborn",
+  "secs": 1.8
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 67,
+  "code": "if (o.state != State.Accepted) revert BadState();",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "GRD",
+  "line": 67,
+  "code": "if (o.state != State.Accepted) revert BadState();",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 68,
+  "code": "if (registry.gatewayOf(o.meterDid) != msg.sender) revert NotOracle();",
+  "status": "killed",
+  "secs": 6.1
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "GRD",
+  "line": 68,
+  "code": "if (registry.gatewayOf(o.meterDid) != msg.sender) revert NotOracle();",
+  "status": "killed",
+  "secs": 6.1
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 69,
+  "code": "if (deliveredWh > o.energyWh) revert OverDelivery();",
+  "status": "killed",
+  "secs": 6.4
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "GRD",
+  "line": 69,
+  "code": "if (deliveredWh > o.energyWh) revert OverDelivery();",
+  "status": "killed",
+  "secs": 6.1
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 70,
+  "code": "o.state = State.Settled;",
+  "status": "killed",
+  "secs": 6.9
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "AOR",
+  "line": 73,
+  "code": "credit[o.seller] += paid;",
+  "status": "killed",
+  "secs": 6.4
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 73,
+  "code": "credit[o.seller] += paid;",
+  "status": "killed",
+  "secs": 6.2
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 74,
+  "code": "if (refund > 0) credit[o.buyer] += refund;",
+  "status": "survived",
+  "secs": 7.5,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "AOR",
+  "line": 74,
+  "code": "if (refund > 0) credit[o.buyer] += refund;",
+  "status": "killed",
+  "secs": 6.4
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 80,
+  "code": "Offer storage o = offers[id];",
+  "status": "stillborn",
+  "secs": 1.7
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 81,
+  "code": "if (o.state != State.Accepted) revert BadState();",
+  "status": "killed",
+  "secs": 6.4
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "GRD",
+  "line": 81,
+  "code": "if (o.state != State.Accepted) revert BadState();",
+  "status": "killed",
+  "secs": 7.7,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 82,
+  "code": "if (block.timestamp <= o.deadline) revert TooEarly();",
+  "status": "killed",
+  "secs": 7.2,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "GRD",
+  "line": 82,
+  "code": "if (block.timestamp <= o.deadline) revert TooEarly();",
+  "status": "killed",
+  "secs": 6.8
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 83,
+  "code": "o.state = State.Refunded;",
+  "status": "killed",
+  "secs": 7.7,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "AOR",
+  "line": 85,
+  "code": "credit[o.buyer] += amt;",
+  "status": "killed",
+  "secs": 6.8
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "SDL",
+  "line": 85,
+  "code": "credit[o.buyer] += amt;",
+  "status": "killed",
+  "secs": 7.1
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "ROR",
+  "line": 91,
+  "code": "if (amt == 0) revert NothingToWithdraw();",
+  "status": "killed",
+  "secs": 6.2
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "GRD",
+  "line": 91,
+  "code": "if (amt == 0) revert NothingToWithdraw();",
+  "status": "killed",
+  "secs": 7.8,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarket.sol",
+  "op": "GRD",
+  "line": 94,
+  "code": "if (!ok) revert TransferFailed();",
+  "status": "survived",
+  "secs": 8.2,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 18,
+  "code": "uint256 public nextId = 1;",
+  "status": "stillborn",
+  "secs": 2.0
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 19,
+  "code": "mapping(uint256 => Offer) public offers;",
+  "status": "stillborn",
+  "secs": 1.8
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 20,
+  "code": "mapping(address => uint256) public credit;",
+  "status": "stillborn",
+  "secs": 1.9
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 33,
+  "code": "if (!registry.isActive(meterDid)) revert InactiveMeter();",
+  "status": "survived",
+  "secs": 8.4,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 34,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "killed",
+  "secs": 6.6
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 34,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "killed",
+  "secs": 6.8
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 34,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "survived",
+  "secs": 8.5,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "LOR",
+  "line": 34,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "killed",
+  "secs": 7.3,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "LOR",
+  "line": 34,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "killed",
+  "secs": 7.5,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 34,
+  "code": "if (energyWh == 0 || pricePerWh == 0 || deadline <= block.timestamp) revert BadOffer();",
+  "status": "killed",
+  "secs": 7.3,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 35,
+  "code": "id = nextId++;",
+  "status": "killed",
+  "secs": 6.3
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 36,
+  "code": "offers[id] = Offer(msg.sender, address(0), meterDid, energyWh, pricePerWh, deadline, State.Open);",
+  "status": "killed",
+  "secs": 6.9
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 41,
+  "code": "Offer storage o = offers[id];",
+  "status": "stillborn",
+  "secs": 1.8
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 42,
+  "code": "if (o.state != State.Open || block.timestamp > o.deadline) revert BadState();",
+  "status": "killed",
+  "secs": 6.6
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 42,
+  "code": "if (o.state != State.Open || block.timestamp > o.deadline) revert BadState();",
+  "status": "survived",
+  "secs": 7.6,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "LOR",
+  "line": 42,
+  "code": "if (o.state != State.Open || block.timestamp > o.deadline) revert BadState();",
+  "status": "killed",
+  "secs": 7.9,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 42,
+  "code": "if (o.state != State.Open || block.timestamp > o.deadline) revert BadState();",
+  "status": "killed",
+  "secs": 7.3,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 44,
+  "code": "if (msg.value != cost) revert WrongPayment();",
+  "status": "killed",
+  "secs": 6.3
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 44,
+  "code": "if (msg.value != cost) revert WrongPayment();",
+  "status": "survived",
+  "secs": 7.4,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 45,
+  "code": "o.buyer = msg.sender; o.state = State.Accepted;",
+  "status": "killed",
+  "secs": 6.4
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 55,
+  "code": "Offer storage o = offers[id];",
+  "status": "stillborn",
+  "secs": 1.6
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 56,
+  "code": "if (o.state != State.Accepted) revert BadState();",
+  "status": "killed",
+  "secs": 6.7
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 56,
+  "code": "if (o.state != State.Accepted) revert BadState();",
+  "status": "killed",
+  "secs": 7.6,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 57,
+  "code": "if (deliveredWh > o.energyWh) revert OverDelivery();",
+  "status": "killed",
+  "secs": 6.5
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 57,
+  "code": "if (deliveredWh > o.energyWh) revert OverDelivery();",
+  "status": "killed",
+  "secs": 8.5,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 58,
+  "code": "if (!registry.isActive(o.meterDid)) revert InactiveMeter();",
+  "status": "killed",
+  "secs": 6.3
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 60,
+  "code": "if (uint256(s) > 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0) revert BadAttestation();",
+  "status": "survived",
+  "secs": 8.0,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 60,
+  "code": "if (uint256(s) > 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0) revert BadAttestation();",
+  "status": "killed",
+  "secs": 7.2
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 63,
+  "code": "if (signer == address(0) || keccak256(abi.encodePacked(signer)) != registry.keyHashOf(o.meterDid)) revert BadAttestation();",
+  "status": "killed",
+  "secs": 6.9
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 63,
+  "code": "if (signer == address(0) || keccak256(abi.encodePacked(signer)) != registry.keyHashOf(o.meterDid)) revert BadAttestation();",
+  "status": "killed",
+  "secs": 6.9
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "LOR",
+  "line": 63,
+  "code": "if (signer == address(0) || keccak256(abi.encodePacked(signer)) != registry.keyHashOf(o.meterDid)) revert BadAttestation();",
+  "status": "killed",
+  "secs": 6.7
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 63,
+  "code": "if (signer == address(0) || keccak256(abi.encodePacked(signer)) != registry.keyHashOf(o.meterDid)) revert BadAttestation();",
+  "status": "killed",
+  "secs": 6.4
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 64,
+  "code": "o.state = State.Settled;",
+  "status": "killed",
+  "secs": 8.4,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "AOR",
+  "line": 67,
+  "code": "credit[o.seller] += paid;",
+  "status": "killed",
+  "secs": 7.5
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 67,
+  "code": "credit[o.seller] += paid;",
+  "status": "killed",
+  "secs": 6.8
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 68,
+  "code": "if (refund > 0) credit[o.buyer] += refund;",
+  "status": "survived",
+  "secs": 8.0,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "AOR",
+  "line": 68,
+  "code": "if (refund > 0) credit[o.buyer] += refund;",
+  "status": "killed",
+  "secs": 6.6
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 73,
+  "code": "Offer storage o = offers[id];",
+  "status": "stillborn",
+  "secs": 1.6
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 74,
+  "code": "if (o.state != State.Accepted) revert BadState();",
+  "status": "killed",
+  "secs": 7.8,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 74,
+  "code": "if (o.state != State.Accepted) revert BadState();",
+  "status": "killed",
+  "secs": 8.3,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 75,
+  "code": "if (block.timestamp <= o.deadline) revert TooEarly();",
+  "status": "killed",
+  "secs": 7.9,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 75,
+  "code": "if (block.timestamp <= o.deadline) revert TooEarly();",
+  "status": "killed",
+  "secs": 8.7,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 76,
+  "code": "o.state = State.Refunded;",
+  "status": "killed",
+  "secs": 8.0,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "AOR",
+  "line": 78,
+  "code": "credit[o.buyer] += amt;",
+  "status": "killed",
+  "secs": 7.9,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 78,
+  "code": "credit[o.buyer] += amt;",
+  "status": "killed",
+  "secs": 7.9,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "ROR",
+  "line": 84,
+  "code": "if (amt == 0) revert NothingToWithdraw();",
+  "status": "killed",
+  "secs": 8.5,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 84,
+  "code": "if (amt == 0) revert NothingToWithdraw();",
+  "status": "killed",
+  "secs": 8.1,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "SDL",
+  "line": 85,
+  "code": "credit[msg.sender] = 0;",
+  "status": "killed",
+  "secs": 7.4,
+  "prior": "survived"
+ },
+ {
+  "contract": "EnergyMarketV2.sol",
+  "op": "GRD",
+  "line": 87,
+  "code": "if (!ok) revert TransferFailed();",
+  "status": "survived",
+  "secs": 8.1,
+  "prior": "survived"
+ }
+]

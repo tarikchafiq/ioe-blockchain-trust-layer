@@ -1,0 +1,118 @@
+{
+ "source": "pqm4 benchmarks.md, commit 6ff2be970f6f4592b341d432042063ceacf424a2 (2026-10-23)",
+ "clock_hz": 24000000,
+ "speed": {
+  "ml-dsa-44/clean": {
+   "keygen": 1874405,
+   "sign": 7925955,
+   "verify": 2063096,
+   "runs": 1000
+  },
+  "ml-dsa-44/m4f": {
+   "keygen": 1426025,
+   "sign": 3943121,
+   "verify": 1421623,
+   "runs": 1000
+  },
+  "ml-dsa-44/m4fstack": {
+   "keygen": 1799062,
+   "sign": 12134284,
+   "verify": 3242333,
+   "runs": 1000
+  },
+  "ml-dsa-65/clean": {
+   "keygen": 3205533,
+   "sign": 12359056,
+   "verify": 3377305,
+   "runs": 1000
+  },
+  "ml-dsa-65/m4f": {
+   "keygen": 2516006,
+   "sign": 6193171,
+   "verify": 2415944,
+   "runs": 1000
+  },
+  "ml-dsa-65/m4fstack": {
+   "keygen": 3412622,
+   "sign": 24421526,
+   "verify": 5732397,
+   "runs": 1000
+  },
+  "ml-dsa-87/clean": {
+   "keygen": 5341863,
+   "sign": 15579513,
+   "verify": 5610203,
+   "runs": 1000
+  },
+  "ml-dsa-87/m4f": {
+   "keygen": 4275859,
+   "sign": 7947380,
+   "verify": 4193104,
+   "runs": 1000
+  },
+  "ml-dsa-87/m4fstack": {
+   "keygen": 5820537,
+   "sign": 33357899,
+   "verify": 9911514,
+   "runs": 1000
+  },
+  "sphincs-sha2-128f-simple/clean": {
+   "keygen": 15742990,
+   "sign": 368575228,
+   "verify": 21923628,
+   "runs": 10
+  }
+ },
+ "stack": {
+  "ml-dsa-44/clean": {
+   "keygen": 38304,
+   "sign": 51976,
+   "verify": 36308
+  },
+  "ml-dsa-44/m4f": {
+   "keygen": 38296,
+   "sign": 44816,
+   "verify": 8912
+  },
+  "ml-dsa-44/m4fstack": {
+   "keygen": 4408,
+   "sign": 5080,
+   "verify": 2712
+  },
+  "ml-dsa-65/clean": {
+   "keygen": 60832,
+   "sign": 79624,
+   "verify": 57736
+  },
+  "ml-dsa-65/m4f": {
+   "keygen": 60824,
+   "sign": 68872,
+   "verify": 9888
+  },
+  "ml-dsa-65/m4fstack": {
+   "keygen": 4408,
+   "sign": 6616,
+   "verify": 2712
+  },
+  "ml-dsa-87/clean": {
+   "keygen": 97696,
+   "sign": 122740,
+   "verify": 92948
+  },
+  "ml-dsa-87/m4f": {
+   "keygen": 97688,
+   "sign": 107892,
+   "verify": 12060
+  },
+  "ml-dsa-87/m4fstack": {
+   "keygen": 4408,
+   "sign": 8144,
+   "verify": 2720
+  },
+  "sphincs-sha2-128f-simple/clean": {
+   "keygen": 2856,
+   "sign": 2468,
+   "verify": 2664
+  }
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "batchHashLog": [
+  {
+   "leaves": 16,
+   "gas": 41930,
+   "gasPerReading": 2620.625
+  },
+  {
+   "leaves": 64,
+   "gas": 78971,
+   "gasPerReading": 1233.921875
+  },
+  {
+   "leaves": 256,
+   "gas": 227560,
+   "gasPerReading": 888.90625
+  },
+  {
+   "leaves": 333,
+   "gas": 286996,
+   "gasPerReading": 861.8498498498499
+  },
+  {
+   "leaves": 1024,
+   "gas": 822718,
+   "gasPerReading": 803.435546875
+  },
+  {
+   "leaves": 4096,
+   "gas": 3226546,
+   "gasPerReading": 787.73095703125
+  }
+ ],
+ "deviceHashChains": [
+  {
+   "k": 10,
+   "gasFirst": 489416,
+   "gasSteady": 147428,
+   "steadyPerDevice": 14742.8
+  },
+  {
+   "k": 50,
+   "gasFirst": 2349560,
+   "gasSteady": 639560,
+   "steadyPerDevice": 12791.2
+  },
+  {
+   "k": 100,
+   "gasFirst": 4674751,
+   "gasSteady": 1254751,
+   "steadyPerDevice": 12547.51
+  },
+  {
+   "k": 200,
+   "gasFirst": 9325228,
+   "gasSteady": 2485240,
+   "steadyPerDevice": 12426.2
+  },
+  {
+   "k": 400,
+   "gasFirst": 18627621,
+   "gasSteady": 4947741,
+   "steadyPerDevice": 12369.3525
+  }
+ ],
+ "attested": {
+  "deploy": 916292,
+  "settleAttested_full": {
+   "min": 55310,
+   "max": 72422,
+   "n": 10
+  },
+  "settleAttested_partial": {
+   "min": 62605,
+   "max": 79717,
+   "n": 10
+  }
+ }
+}
